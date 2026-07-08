@@ -498,3 +498,14 @@ advanced:
     slack: 4000
   batch_send_interval: 3              # 批次发送间隔（秒）
   feishu_message_separator: "━━━━━━━━━━━━━━━━"
+
+  silent_push:                                                                         
+       enabled: true  # 改为 true 启用                                                    
+       time_range:                                                                        
+         start: "09:00"  # 只在 9点到21点推送                                             
+         end: "21:00"                                                                     
+       once_per_day: true  # 每天只推一次 
+
+  report:                                                                              
+       mode: "daily"  # 可选: daily | incremental | current 
+  push_mode: current    # current = 实时推送, daily = 每天汇总
